@@ -47,7 +47,6 @@ end
 
 function M.apply(input)
 	local constants = render.constant_buffer()
-	constants.time = lumiere.time()
 	constants.ambient_light = ambient_light
 	
 	render.set_view(IDENTITY)

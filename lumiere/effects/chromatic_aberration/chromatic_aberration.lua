@@ -14,7 +14,6 @@ end
 
 function M.apply(input)
 	local constants = render.constant_buffer()
-	constants.time = lumiere.time()
 
 	render.set_view(IDENTITY)
 	render.set_projection(IDENTITY)

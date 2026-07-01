@@ -1,6 +1,5 @@
 local M = {}
 
-local time = vmath.vector4(0)
 local clear_color = vmath.vector4(0)
 local resolution = vmath.vector4(0)
 
@@ -14,10 +13,6 @@ local lumiere = {
 	timestamp = 0,
 	clear_options = {[graphics.BUFFER_TYPE_COLOR0_BIT] = clear_color, [graphics.BUFFER_TYPE_DEPTH_BIT] = 1}
 }
-
-function M.time()
-	return time
-end
 
 function M.clear_color()
 	return clear_color
@@ -115,8 +110,6 @@ function M.update()
 	local now = socket.gettime()
 	local dt = now - lumiere.timestamp
 	lumiere.timestamp = now
-	
-	time.x = time.x + dt
 
 	-- detect updates to effects
 	if lumiere.new_effects then

@@ -38,7 +38,6 @@ end
 
 function M.apply(input)
 	local constants = render.constant_buffer()
-	constants.time = lumiere.time()
 
 	-- apply distortion by combining the mask and input
 	render.set_view(IDENTITY)
