@@ -2,7 +2,6 @@ varying mediump vec4 position;
 varying mediump vec2 var_texcoord0;
 
 uniform lowp sampler2D DIFFUSE_TEXTURE;
-uniform lowp vec4 tint;
 uniform lowp vec4 time;
 uniform lowp vec4 resolution;
 
